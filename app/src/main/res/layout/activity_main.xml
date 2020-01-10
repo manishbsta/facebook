@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbarhead"
+        layout="@layout/toolbardash"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_below="@id/toolbarhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/button"
+        android:background="#fff"
+        android:layout_marginBottom="2dp"
+        app:itemIconTint="@color/navigation_selector_color"
+        app:itemTextColor="@color/navigation_selector_color"
+        android:id="@+id/homeNavigation"
+        app:elevation="0dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/homeNavigation"
+        android:id="@+id/status"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="What's on your mind"
+            android:id="@+id/statustext" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_background"
+            android:id="@+id/image_choose"
+            android:layout_marginLeft="30dp"
+            />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:id="@+id/post"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                style="@style/button"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="3"
+        android:layout_below="@id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/button_layout">
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live"
+            android:layout_columnWeight="1"
+            android:textAllCaps="false"
+            android:drawableTint="#e74c3c"
+            android:drawableLeft="@drawable/ic_video"
+            />
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photo"
+            android:drawableTint="#009432"
+            android:layout_columnWeight="1"
+            android:textAllCaps="false"
+            android:id="@+id/image_upload"
+            android:drawableLeft="@drawable/ic_icon"
+            />
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTint="#e84393"
+            android:layout_columnWeight="1"
+            android:text="Check In"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_placeholder_filled_point"
+            />
+    </GridLayout>
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
+</RelativeLayout>

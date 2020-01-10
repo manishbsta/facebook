@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/cover"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/login_cover"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cover"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:id="@+id/form"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Espanol   Francais   More..."
+            android:layout_gravity="center"
+            />
+    <EditText
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Phone or email"
+        android:id="@+id/email"
+        />
+        <EditText
+            android:id="@+id/password"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/button"
+            android:background="@drawable/bluebtn"
+            android:text="Log In"
+            android:id="@+id/login_btn"
+            android:textAllCaps="false"
+
+            />
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Forget Password?"
+            android:textColor="#4267b2"
+            android:textAllCaps="false"
+
+            />
+
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/form"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="30dp"
+        android:background="#F0f0f0"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/form"
+        android:layout_marginTop="-10dp"
+        android:padding="5dp"
+        android:background="@drawable/circle"
+        android:id="@+id/or"
+        android:text="OR" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Facebook Account"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/or"
+        android:textColor="#fff"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
